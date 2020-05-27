@@ -15,7 +15,19 @@ yarn @stackchat/dynamic-content-toolkit
 ```
 
 # Usage
+## A note on import conventions
+The examples in the rest of this README import specific items directly -- this is suitable for externally bundled and uploaded code. To use the dynamic content toolkit items in the dashboard editor, use the pre-imported `dc` namespace as shown here:
+```js
+export function myCloudFunction() {
+  const textMessage = new dc.TextMessage();
+  textMessage.text = "Hello, world!";
+  const messageThread = new dc.MessageThread();
+  messageThread.messages = [ textMessage ];
+  return [ messageThread ];
+}
+```
 
+For NPM/yarn projects, use the following conventions:
 ```js
 // Example Cloud Function that uses Dynamic Content Toolkit
 import { MessageThread, TextMessage } from "@stackchat/dynamic-content-toolkit";
