@@ -18,7 +18,7 @@ yarn @stackchat/dynamic-content-toolkit
 
 ```js
 // Example Cloud Function that uses Dynamic Content Toolkit
-import { MessageCard, TextMessage } from "@stackchat/dynamic-content-toolkit";
+import { MessageThread, TextMessage } from "@stackchat/dynamic-content-toolkit";
 
 export const myCloudFunction = () => {
   const textMessage = new TextMessage();
